@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <el-form ref="form" :rules='rules' :model="form" label-width="80px">
-      <img src="../assets/logo.png" alt="">
+      <img src="../assets/IMG_2134.jpg" alt="">
       <el-form-item label="用户名" prop='username'>
         <el-input v-model="form.username"></el-input>
       </el-form-item>
@@ -52,7 +52,6 @@ export default {
           password: this.form.password
         }
       }).then(res => {
-        console.log(res)
         const { meta, data } = res.data
         if (meta.status === 400) {
           this.$message({
