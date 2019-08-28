@@ -48,6 +48,9 @@ export default {
         query: this.query,
         pagenum: this.pagenum,
         pagesize: this.pagesize
+      },
+      headers: {
+        Authorization: localStorage.getItem('token')
       }
     })
   }
